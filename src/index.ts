@@ -15,6 +15,7 @@ import exchangesTicker, {
 } from "./api/exchanges_ticker";
 import { API_BASE, IntervalEnum } from "./constants";
 import { isEmpty } from "./utils/str";
+import currenciesSparkline, { ICurrenciesSparklineOptions } from "./api/currencies_sparkline";
 
 export {
   IRawCurrencyTicker,
@@ -66,6 +67,13 @@ class Nomics {
     fetchOptions?: RequestInit
   ) {
     return currenciesTicker(this.apiKey, options, fetchOptions);
+  }
+
+  public currenciesSparkline(
+    options: ICurrenciesSparklineOptions,
+    fetchOptions?: RequestInit
+  ) {
+    return currenciesSparkline(this.apiKey, options, fetchOptions);
   }
 
   public exchangesTicker(
