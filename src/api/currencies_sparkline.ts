@@ -15,7 +15,7 @@ export interface IRawCurrencySparkline {
   prices: string[];
 }
 
-const CURRENCIES_SPARKLINE_PATH = 'v1/currencies/sparkline'
+const CURRENCIES_SPARKLINE_PATH = '/v1/currencies/sparkline'
 
 const currenciesSparkline = (
   key: string,

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var __1 = __importDefault(require(".."));
 var fetch_1 = require("../utils/fetch");
 var url_1 = require("../utils/url");
-var CURRENCIES_SPARKLINE_PATH = 'v1/currencies/sparkline';
+var CURRENCIES_SPARKLINE_PATH = '/v1/currencies/sparkline';
 var currenciesSparkline = function (key, options, fetchOptions) {
     var convert = options.convert, ids = options.ids, start = options.start, end = options.end;
     var objParams = {
