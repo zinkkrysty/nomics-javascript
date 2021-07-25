@@ -10,6 +10,7 @@ var constants_1 = require("./constants");
 exports.IntervalEnum = constants_1.IntervalEnum;
 var str_1 = require("./utils/str");
 var currencies_sparkline_1 = __importDefault(require("./api/currencies_sparkline"));
+var exchange_rates_history_1 = __importDefault(require("./api/exchange_rates_history"));
 var Nomics = /** @class */ (function () {
     function Nomics(options) {
         this.version = 1;
@@ -41,6 +42,9 @@ var Nomics = /** @class */ (function () {
     };
     Nomics.prototype.exchangeMarketsTicker = function (options, fetchOptions) {
         return exchange_markets_ticker_1.default(this.apiKey, options, fetchOptions);
+    };
+    Nomics.prototype.exchangeRatesHistory = function (options, fetchOptions) {
+        return exchange_rates_history_1.default(this.apiKey, options, fetchOptions);
     };
     Nomics.baseUrl = constants_1.API_BASE;
     return Nomics;

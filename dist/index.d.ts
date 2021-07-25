@@ -3,6 +3,7 @@ import { ExchangeMarketTickerInterval, IExchangeMarketsTickerOptions, IRawExchan
 import { ExchangeTickerInterval, IExchangesTickerOptions, IRawExchangeTicker } from "./api/exchanges_ticker";
 import { IntervalEnum } from "./constants";
 import { ICurrenciesSparklineOptions } from "./api/currencies_sparkline";
+import { IExchangeRatesHistoryOptions } from "./api/exchange_rates_history";
 export { IRawCurrencyTicker, IRawExchangeTicker, IRawExchangeMarketTicker, CurrencyTickerInterval, ExchangeTickerInterval, ExchangeMarketTickerInterval };
 export { IntervalEnum };
 export interface INomics {
@@ -23,5 +24,6 @@ declare class Nomics {
     currenciesSparkline(options: ICurrenciesSparklineOptions, fetchOptions?: RequestInit): Promise<import("./api/currencies_sparkline").IRawCurrencySparkline[]>;
     exchangesTicker(options?: IExchangesTickerOptions, fetchOptions?: RequestInit): Promise<IRawExchangeTicker[]>;
     exchangeMarketsTicker(options?: IExchangeMarketsTickerOptions, fetchOptions?: RequestInit): Promise<IRawExchangeMarketTicker[]>;
+    exchangeRatesHistory(options: IExchangeRatesHistoryOptions, fetchOptions?: RequestInit): Promise<import("./api/exchange_rates_history").IRawExchangeRatesHistory[]>;
 }
 export default Nomics;
